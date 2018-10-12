@@ -7,15 +7,15 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
   },
+
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "webpack src/main.js dist/bundle.js",
   },
+
   "eslintConfig": {
     "extends": "react-app"
   },
+
   "browserslist": [
     ">0.2%",
     "not dead",
