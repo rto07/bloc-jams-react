@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Router, Link} from 'react-router-dom';
 import './App.css';
+import Landing from './components/Landing';
+import Library from './components/Library';
 
 class App extends Component {
+  
   render() {
+    
     return (
+      
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      
+        <header>
+          <h1>Bloc Jams</h1>
         </header>
+       
+        <main>
+          <exact path="/" component={Landing}/>;
+          <exact path="/library" component={Library}//]l>
+        </main>
+      
       </div>
     );
   }
