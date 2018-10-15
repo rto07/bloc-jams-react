@@ -10,15 +10,15 @@ class App extends Component {
     
     return (
       
-      <div className="App">
+      <div className = "App">
       
         <header>
           <h1>Bloc Jams</h1>
         </header>
        
         <main>
-          <exact path="/" component={Landing}/>;
-          <exact path="/library" component={Library}//]l>
+          <exact path = "/" component = {Landing}/>;
+          <exact path = "/library" component = {Library}
         </main>
       
       </div>
