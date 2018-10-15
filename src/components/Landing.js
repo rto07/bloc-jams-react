@@ -6,4 +6,4 @@ const Landing = () => (
 	</section>
 	);
 
-	export default landing;
+	export default Landing;
