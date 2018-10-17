@@ -22,6 +22,10 @@ class App extends Component {
           <h1>Bloc Jams</h1>
 
         </header>
+<<<<<<< HEAD
+       
+=======
+>>>>>>> ab98efc96cb5d7f493487a398e56295e0bfb6937
       </div>
     );
   }
