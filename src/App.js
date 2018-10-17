@@ -28,7 +28,7 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path = "/album" component = {Album}/>
         </main>
-
+      
       </div>
     );
   }
