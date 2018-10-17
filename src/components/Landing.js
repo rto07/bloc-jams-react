@@ -8,6 +8,7 @@ const Landing = () => (
 			<div class = "point">
 				<h2 className = "point-title">Choose your music</h2>
 				<p className = "point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
+				
 			</div>
 
 			<div className = "point">
@@ -18,6 +19,7 @@ const Landing = () => (
 			<div className = "point">
 				<h2 className="point-title">Mobile Enabled</h2>
         		<p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
+
 			</div>
 		</section>
 	</section>
