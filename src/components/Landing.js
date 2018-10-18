@@ -28,10 +28,7 @@ const Landing = () => (
 
 			</div>
 		</section>
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 	</section>
 	);
 
