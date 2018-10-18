@@ -4,12 +4,8 @@ const Landing = () => (
 	<section className = "landing">
 <<<<<<< HEAD
 		<h1 className = "hero-title" > Turn the Music Up!</h1>
-=======
-<<<<<<< HEAD
-	Landing page will go here.
-=======
+
 		<h1> className = "hero-title">Turn the Music Up!</h1>
->>>>>>> master
 
 		<section className = "selling points">
 			<div class = "point">
@@ -27,7 +23,7 @@ const Landing = () => (
         		<p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
 			</div>
 		</section>
->>>>>>> ab98efc96cb5d7f493487a398e56295e0bfb6937
+
 	</section>
 	);
 
