@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
 
-<<<<<<< HEAD
 class Library extends Component {
 	constructor(props){
 		super(props);
@@ -26,12 +25,5 @@ class Library extends Component {
 		);
 	}
 }
-=======
-const Library = () => (
-	<section classname = "library">
-		Library page will go here.
-	</section>
-	);
->>>>>>> master
 
 export default Library;
