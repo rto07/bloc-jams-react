@@ -1,18 +1,14 @@
 import React from 'react';
 
 const Landing = () => (
-<<<<<<< HEAD
-	<section className = "landing">
-<<<<<<< HEAD
-		<h1 className = "hero-title" > Turn the Music Up!</h1>
+
 
 		<h1> className = "hero-title">Turn the Music Up!</h1>
-=======
+
   <section className="landing">
     Landing page will go here
   </section>
 );
->>>>>>> master
 
 		<section className = "selling points">
 			<div class = "point">
