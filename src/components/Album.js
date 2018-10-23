@@ -79,6 +79,7 @@ class Album extends Component {
 
           			</tbody>
 		        </tabel>
+
 			</section> 
 		);
 	}
