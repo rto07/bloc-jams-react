@@ -44,6 +44,10 @@ class Album extends Component {
 			}
 		}
 
+		hover(event){
+			let play = onMouseEnter
+		}
+
 
 	render() {
 		
@@ -61,7 +65,7 @@ class Album extends Component {
 		           </div>
 				</section>
 
-		        <tabel id = "song-list">
+		        <table id = "song-list">
 		        	<colgroup>
 		        		<col id = "song-number-column" />
 		        		<col id = "song-title-column" />
@@ -71,14 +75,15 @@ class Album extends Component {
 		        	<tbody>
 		        		{this.state.album.songs.map( (song, index) =>
 			              <tr className = "song" key = {index} onClick = {() => this.handleSongClick(song)} >			        
-			              	<td className = "song-number">{index + 1}</td>
+			              	<td className = "song-number"> <span className = "ion-play" onMouseEnter><span className = "ion-pause" onMouseLeave>{index + 1}</span></span></td>
 			                <td className = "song-title">{song.title}</td>
 			                <td className = "song-duration">{song.duration}</td>
 			              </tr>
 			            )}
 
           			</tbody>
-		        </tabel>
+
+		        </table>
 
 			</section> 
 		);
