@@ -21,7 +21,7 @@ class Album extends Component {
 
 		play() {
 			this.audioElement.play();
-			this.setState({ isPlaying: true })
+			this.setState({ isPlaying: true });
 		}
 
 		pause() {
@@ -31,14 +31,14 @@ class Album extends Component {
 
 		setSong(song) {
 			this.audioElement.src = song.audioSrc;
-			this.setState ({ currrentSong: song })
+			this.setState({ currrentSong: song });
 		}
 
 		handleSongClick(song) {
 			const isSameSong = this.state.currentSong === song;
 			if (this.state.isPlaying && isSameSong) {
 				this.pause();
-			} else 
+			} else {
 				if (!isSameSong) {this.setSong(song); }
 				this.play();
 			}
