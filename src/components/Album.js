@@ -13,6 +13,7 @@ class Album extends Component {
 			album : album,
 			currentSong: album.songs[0],
 			isPlaying : false
+			this.handleSongClick = this.handleSongClick.bind(this);
 		};
 
 		this.audioElement = document.createElement('audio');
@@ -44,8 +45,20 @@ class Album extends Component {
 			}
 		}
 
-		hover(event){
-			let play = onMouseEnter
+		getInitialState(){
+			return(
+				isMouseInside: false
+			);
+		}
+
+		onMouseEnter = () => {
+			this.setState({ isMouseInside: true });
+			this.handleSongClick;
+		}
+
+		onMouseLeave = () =>{
+			this.setState({ isMouseInside: false });
+			this.handleSongClick;
 		}
 
 
@@ -65,7 +78,8 @@ class Album extends Component {
 		           </div>
 				</section>
 
-		        <table id = "song-list">
+		        <table id = "song-list"><div onMouseEnter = {this.mouseEnter} onMouseLeave = {this.mouseLeave}> {this.state.isMouseInside ? <button>Your Button</button> : null}
+    				</div>
 		        	<colgroup>
 		        		<col id = "song-number-column" />
 		        		<col id = "song-title-column" />
@@ -75,7 +89,7 @@ class Album extends Component {
 		        	<tbody>
 		        		{this.state.album.songs.map( (song, index) =>
 			              <tr className = "song" key = {index} onClick = {() => this.handleSongClick(song)} >			        
-			              	<td className = "song-number"> <span className = "ion-play" onMouseEnter><span className = "ion-pause" onMouseLeave>{index + 1}</span></span></td>
+			              	<td className = "song-number"> <span className = "ion-play" this.onMouseEnter ><span className = "ion-pause" this.onMouseLeave>{index + 1}</span></span></td>
 			                <td className = "song-title">{song.title}</td>
 			                <td className = "song-duration">{song.duration}</td>
 			              </tr>
