@@ -46,12 +46,14 @@ class Album extends Component {
 
 
 
-		onMouseEnter = (e) => {
-			this.setState({ isMouseInside: true });
+		onMouseEnter(index) {
+			const index = (isMouseInside);
+				this.setState( onMouseEnter: true );
 		}
 
-		onMouseLeave = (e) =>{
-			this.setState({ isMouseInside: false });
+		onMouseLeave(index) {
+			const indexTwo = (isMouseInside);
+			this.setState( onMouseLeave: true );
 		}
 
 
@@ -61,44 +63,51 @@ class Album extends Component {
 			
 			<section className = "album">
 		        <section id = "album-info">
+		        
 		           <img id = "album-cover-art" src = {this.state.album.albumCover} alt = {this.state.album.title}/>
 		           
 		           <div className = "album-details">
+		             
 		             <h1 id = "album-title" > {this.state.album.title}</h1>
+		             
 		             <h2 className = "artist" > {this.state.album.artist}</h2>
+		             
 		             <div id = "release-info" > {this.state.album.realeaseInfo}
 		             </div>
+		           
 		           </div>
+				
 				</section>
 
 		        <table id = "song-list">
-		        <div className= "onMouseEnter">
-		        	<colgroup>
-		        		<col id = "song-number-column" />
-		        		<col id = "song-title-column" />
-		        		<col id = "song-duration-column" />
-		        	</colgroup>
-		        	
-		        	<tbody>
-		        		{this.state.album.songs.map( (song, index) =>
-			              <tr className = "song" key = {index} onClick = {onMouseEnter(index) => 
-			              		{this.handleSongClick(song); var index = onMouseLeave();
-			              		} 
-			              		}>			        
-			              	<td className = "song-number">{song.index}{}<span className = "ion-play", className = "ion-pause">{index + 1}</span></span></td>
-			                <td className = "song-title">{song.title}</td>
-			                <td className = "song-duration">{song.duration}</td>
-			              </tr>
-			            )}
-			            </div>
+			    
+			        <div className= "onMouseEnter">
+			    
+			        	<colgroup>
+			        		<col id = "song-number-column" />
+			        		<col id = "song-title-column" />
+			        		<col id = "song-duration-column" />
+			        	</colgroup>
+			        	
+			        	<tbody>
+			        		{this.state.album.songs.map( ( song, index )
+				              
+				              <tr className = "song" key = { index }  onClick = { () => this.handleSongClick( song )} onMouseEnter = {() => this.onMouseEnter( index )} onMouseLeave = {() => this.onMouseLeave( index )}>		        
+				              	<td className = "song-number"> { song.index } <span className = "ion-play"><span className = "ion-pause"> { index + 1 } </span></span></td>
+				                
+				                <td className = "song-title">{ song.title }</td>
+				                
+				                <td className = "song-duration">{ song.duration }</td>
+				              
+				              </tr>
+				            )}
 
-          			</tbody>
+	          			</tbody>
+	          		</div>
+			 	</table>		
 
-		        </table>
-
-			</section> 
-		);
+		)
 	}
-}
+};
 
 	export default Album;
