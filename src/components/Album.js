@@ -37,23 +37,19 @@ class Album extends Component {
 		handleSongClick(song) {
 			const isSameSong = this.state.currentSong === song;
 			if (this.state.isPlaying && isSameSong) {
-				this.pause();
+					this.pause();
 			} else {
 				if (!isSameSong) {this.setSong(song); }
-				this.play();
+					this.play();
 			}
 		}
 
-
-
-		onMouseEnter(index) {
-			const index = (isMouseInside);
-				this.setState( onMouseEnter: true );
+		onMouseEnter() {
+			this.setState( this.onMouseEnter: true );
 		}
 
 		onMouseLeave(index) {
-			const indexTwo = (isMouseInside);
-			this.setState( onMouseLeave: true );
+			this.setState( this.onMouseLeave: true );
 		}
 
 
@@ -62,6 +58,7 @@ class Album extends Component {
 		return (
 			
 			<section className = "album">
+		       
 		        <section id = "album-info">
 		        
 		           <img id = "album-cover-art" src = {this.state.album.albumCover} alt = {this.state.album.title}/>
@@ -90,14 +87,20 @@ class Album extends Component {
 			        	</colgroup>
 			        	
 			        	<tbody>
-			        		{this.state.album.songs.map( ( song, index )
+			        		{this.state.album.songs.map( ( song, index ) =>
 				              
-				              <tr className = "song" key = { index }  onClick = { () => this.handleSongClick( song )} onMouseEnter = {() => this.onMouseEnter( index )} onMouseLeave = {() => this.onMouseLeave( index )}>		        
-				              	<td className = "song-number"> { song.index } <span className = "ion-play"><span className = "ion-pause"> { index + 1 } </span></span></td>
+				              <tr className = "song" key = { index }  onClick = {()=>this.handleSongClick(song)} onMouseEnter={() => this.onMouseEnter(index)} onMouseLeave = {() => this.onMouseLeave(index)}>
+
+				              	<td className = "song-number"> { song.index } <span className = "ion-play"><span className = "ion-pause"> { index + 1 } 
+				              	</span>
+				              	</span>
+				              	</td>
 				                
-				                <td className = "song-title">{ song.title }</td>
+				                <td className = "song-title">{ song.title }
+				                </td>
 				                
-				                <td className = "song-duration">{ song.duration }</td>
+				                <td className = "song-duration">{ song.duration }
+				                </td>
 				              
 				              </tr>
 				            )}
@@ -105,7 +108,7 @@ class Album extends Component {
 	          			</tbody>
 	          		</div>
 			 	</table>		
-
+			</section>
 		)
 	}
 };
