@@ -44,12 +44,13 @@ class Album extends Component {
 			}
 		}
 
-		onMouseEnter() {
-			this.setState( this.onMouseEnter: true );
+
+		MouseEnter(index) {
+			document.getElementById("hover")
 		}
 
-		onMouseLeave(index) {
-			this.setState( this.onMouseLeave: true );
+		MouseLeave(index) {
+			document.getElementById("hover")
 		}
 
 
@@ -78,18 +79,23 @@ class Album extends Component {
 
 		        <table id = "song-list">
 			    
-			        <div className= "onMouseEnter">
+					<div className= "hover">
 			    
 			        	<colgroup>
+
 			        		<col id = "song-number-column" />
 			        		<col id = "song-title-column" />
 			        		<col id = "song-duration-column" />
+
 			        	</colgroup>
 			        	
 			        	<tbody>
+
 			        		{this.state.album.songs.map( ( song, index ) =>
 				              
-				              <tr className = "song" key = { index }  onClick = {()=>this.handleSongClick(song)} onMouseEnter={() => this.onMouseEnter(index)} onMouseLeave = {() => this.onMouseLeave(index)}>
+				              <tr className = "song" 
+				              key = { index } 
+				              onClick = {() => this.handleSongClick( song )} document.getElementById ( "song" ) .addEventListener ( "onMouseEnter", MouseEnter ); document.getElementById ( "song" ) .addEventListener ( "onMouseLeave", MouseLeave );>
 
 				              	<td className = "song-number"> { song.index } <span className = "ion-play"><span className = "ion-pause"> { index + 1 } 
 				              	</span>
