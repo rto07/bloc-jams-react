@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../Data/albums';
 
+
 class Album extends Component {
 	constructor(props){
 		super(props);
@@ -12,7 +13,8 @@ class Album extends Component {
 		this.state = {
 			album : album,
 			currentSong: album.songs[0],
-			isPlaying : false
+			isPlaying : false,
+			isHovered : false
 		};
 
 		this.audioElement = document.createElement('audio');
@@ -42,15 +44,6 @@ class Album extends Component {
 				if (!isSameSong) {this.setSong(song); }
 					this.play();
 			}
-		}
-
-
-		MouseEnter(index) {
-			document.getElementById("hover")
-		}
-
-		MouseLeave(index) {
-			document.getElementById("hover")
 		}
 
 
@@ -93,13 +86,31 @@ class Album extends Component {
 
 			        		{this.state.album.songs.map( ( song, index ) =>
 				              
-				              <tr className = "song" 
-				              key = { index } 
-				              onClick = {() => this.handleSongClick( song )} document.getElementById ( "song" ) .addEventListener ( "onMouseEnter", MouseEnter ); document.getElementById ( "song" ) .addEventListener ( "onMouseLeave", MouseLeave );>
+			                  <tr className="song" key={index} onClick={() => this.handleSongClick(song)}
+			                    onMouseEnter={(isMouseInside) => this.setState({ isHovered: index + 1 })}
+			                    onMouseLeave={() => this.setState({ isHovered: false })}>
 
-				              	<td className = "song-number"> { song.index } <span className = "ion-play"><span className = "ion-pause"> { index + 1 } 
-				              	</span>
-				              	</span>
+				              	<td className = "song-actions"> 
+				              		<button id="song-action-buttons">
+				              		{ ( this.state.currentSong.title === song.title ) ?
+			                        <span className = { this.state.isPlaying ? "ion-pause" : "ion-play" }>
+			                        </span>
+
+			                        :
+
+			                        ( this.state.isHovered === index + 1 ) ?
+			                        
+			                        <span className = "ion-play">
+			                        </span>
+			                        
+			                        :
+			                        
+			                        <span className = "song-number">{ index+1 }
+			                        </span>
+			                      }
+
+			                      </button>
+
 				              	</td>
 				                
 				                <td className = "song-title">{ song.title }
