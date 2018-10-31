@@ -38,6 +38,7 @@ This is the same way you should set up the event listeners for `mouseEnter` and 
 
 All other code in that block is unnecessary*/}
 
+
 class Album extends Component {
 	constructor(props){
 		super(props);
@@ -142,12 +143,11 @@ class Album extends Component {
 								onClick = {() => this.MouseLeaving()}
 
 					             < td 
-					              	className = "song-actions"> 
-					              		{''}
-					              	{ this.state.isPlaying ? ( < span >
-					              				{''}
-					              				{this.state.currentSong.title === song.title ? (
-							                <span className = "ion-pause" />
+					              	className = "song-actions"> {''}
+					              	
+					              	{ this.state.isPlaying ? ( < span > {''}
+					              			{this.state.currentSong.title === song.title ? (
+							                < span className = "ion-pause" />
 							              ) : (
 							                < span >
 							                	{index + 1}</span>
@@ -169,7 +169,7 @@ class Album extends Component {
 					                </td>
 					              
 				              </tr>
-				            ))}
+				            )}
 
 	          			</tbody>
 			 	</table>		
