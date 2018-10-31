@@ -74,13 +74,11 @@ class Album extends Component {
 		onMouseEnter( index) {
 			var index = "isMouseInside";
 			if ( this.setState.isHovered = true && this.state.currentSong ) {
-					onClick( this.play );
 			}
 		}
 
-		onMouseLeaving( index ) {
+		onMouseLeaving() {
 			if ( this.setState.isHovered = false && this.state.currentSong ) {
-					onClick(this.pause );
 			}
 		}
 
@@ -125,45 +123,36 @@ class Album extends Component {
 			                < tr 
 			                  	className="song" 
 			                  	key={index} 
-			                  	onClick = {() => this.handleSongClick(song)}
+								onClick = {() => this.onMouseEnter(index)}
+								onClick = {() => this.onMouseLeaving()}
 
-			                   	this.setState({ isHovered = true; })
-
-			                    document.getElementById(" song-list ").addEventListener("mouseEnter", onMouseEnter(isMouseInside));>
-			                   	
-			                   	this.setState({ isHovered: false; })}
-
-			                    document.getElementById(" song-list ").addEventListener("mouseLeave", onMouseLeave);>
-			                }
-
-				             < td 
-				              		className = "song-actions"> 
-				              		{''}
-				              		{ this.state.isPlaying ? (
-				              			< span >
-				              				{''}
-				              				{this.state.currentSong.title === song.title ? (
-						                <span className="ion-pause" />
-						              ) : (
-						                < span >
-						                	{index + 1}</span>
-						              		)}
-						            	< /span >
-						          		) : this.state.isHovered === index + 1 ? (
-						            < span className="ion-play" />
-						          ) : (
-						            < span className="song-number">{index + 1}< /span >
-						          )}
-						        < /td >
-				                
-				                < td 
-				                	className = "song-title">{ song.title }
-				                < /td >
-				                
-				                <td 
-				                	className = "song-duration">{ song.duration }
-				                </td>
-				              
+					             < td 
+					              	className = "song-actions"> 
+					              		{''}
+					              	{ this.state.isPlaying ? ( < span >
+					              				{''}
+					              				{this.state.currentSong.title === song.title ? (
+							                <span className="ion-pause" />
+							              ) : (
+							                < span >
+							                	{index + 1}</span>
+							              		)}
+							            	< /span >
+							          		) : this.state.isHovered === index + 1 ? (
+							            < span className="ion-play" />
+							          ) : (
+							            < span className="song-number">{index + 1}< /span >
+							          )}
+							        < /td >
+					                
+					                < td 
+					                	className = "song-title">{ song.title }
+					                < /td >
+					                
+					                <td 
+					                	className = "song-duration">{ song.duration }
+					                </td>
+					              
 				              </tr>
 				            ))}
 
