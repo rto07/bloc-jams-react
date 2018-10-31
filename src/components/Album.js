@@ -132,7 +132,7 @@ class Album extends Component {
 
 			        		{this.state.album.songs.map( ( song, index ) => (
 				              
-			                < tr >
+			                < tr
 			                  	className="song" 
 			                  	key={index}
 
@@ -141,9 +141,10 @@ class Album extends Component {
 								onClick = {() => this.MouseEnter(index)}
 								
 								onClick = {() => this.MouseLeaving()}
+							>
 
-					             < td 
-					              	className = "song-actions"> {''}
+					        	< td >
+					              	className = "song-actions"
 					              	
 					              	{ this.state.isPlaying ? ( < span > {''}
 					              			{this.state.currentSong.title === song.title ? (
