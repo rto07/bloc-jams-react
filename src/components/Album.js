@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../Data/albums';
+<script src='./bundle.js' type='text/jsx'>
+
 
 {/* Your event listeners should be placed alongside side this.handleSongClick():
 
@@ -25,7 +27,16 @@ We can go through the logic to display icons in a <span> after. They will be par
 I would look up how to formulate event listeners. This is the proper way:
 
 onClick = {() => this.handleSongClick( song )}    
-onMouseEnter={() => this.onMouseEnter( index )}*/}
+onMouseEnter={() => this.onMouseEnter( index )}
+
+You should not have a `setState()` method in the block above `this.setState({ isHovered = true; })`  
+You can set the `isHovered` state inside the event handlers `onMouseEnter( index)`  and `onMouseLeave()` (the functions)
+
+Also, do you see the way you are setting up the `onClick` event listener? `onClick = {() => this.handleSongClick(song)}`
+
+This is the same way you should set up the event listeners for `mouseEnter` and `mouseLeave`
+
+All other code in that block is unnecessary*/}
 
 class Album extends Component {
 	constructor(props){
@@ -71,13 +82,13 @@ class Album extends Component {
 			}
 		}
 
-		onMouseEnter( index) {
+		MouseEnter( index ) {
 			var index = "isMouseInside";
 			if ( this.setState.isHovered = true && this.state.currentSong ) {
 			}
 		}
 
-		onMouseLeaving() {
+		MouseLeaving() {
 			if ( this.setState.isHovered = false && this.state.currentSong ) {
 			}
 		}
@@ -123,8 +134,8 @@ class Album extends Component {
 			                < tr 
 			                  	className="song" 
 			                  	key={index} 
-								onClick = {() => this.onMouseEnter(index)}
-								onClick = {() => this.onMouseLeaving()}
+								onClick = {() => this.MouseEnter(index)}
+								onClick = {() => this.MouseLeaving()}
 
 					             < td 
 					              	className = "song-actions"> 
@@ -132,7 +143,7 @@ class Album extends Component {
 					              	{ this.state.isPlaying ? ( < span >
 					              				{''}
 					              				{this.state.currentSong.title === song.title ? (
-							                <span className="ion-pause" />
+							                <span className = "ion-pause" />
 							              ) : (
 							                < span >
 							                	{index + 1}</span>
