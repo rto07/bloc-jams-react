@@ -1,42 +1,5 @@
 import React, { Component } from 'react';
 import albumData from './../Data/albums';
-<script src='./bundle.js' type='text/jsx'>
-
-
-{/* Your event listeners should be placed alongside side this.handleSongClick():
-
-Move them from here:
-
-`<td className = "song-number"> <span className = "ion-play" this.onMouseEnter ><span className = "ion-pause" this.onMouseLeave>{index + 1}</span></span></td>`
-
-To here:
-
- `<tr className = "song" key = {index} onClick = {() => this.handleSongClick(song)} >`
-
-You should not attempt to return a <span> alongside the event listeners.
-
-This is the approach you should take:
-
-1. add event listeners ONLY to the <tr> tag. 
-2. Pass parameter index into onMouseEnter()
-3. In onMouseEnter(index) assign index to `isMouseInside`
-4. Do not call `handleSongClick` inside onMouseEnter() and onMouseLeave()
-
-We can go through the logic to display icons in a <span> after. They will be part of a <td> tag 
-
-I would look up how to formulate event listeners. This is the proper way:
-
-onClick = {() => this.handleSongClick( song )}    
-onMouseEnter={() => this.onMouseEnter( index )}
-
-You should not have a `setState()` method in the block above `this.setState({ isHovered = true; })`  
-You can set the `isHovered` state inside the event handlers `onMouseEnter( index)`  and `onMouseLeave()` (the functions)
-
-Also, do you see the way you are setting up the `onClick` event listener? `onClick = {() => this.handleSongClick(song)}`
-
-This is the same way you should set up the event listeners for `mouseEnter` and `mouseLeave`
-
-All other code in that block is unnecessary*/}
 
 
 class Album extends Component {
@@ -83,15 +46,15 @@ class Album extends Component {
 			}
 		}
 
-		MouseEnter( index ) {
+		onMouseEnter( index ) {
 			var index = "isMouseInside";
-			if ( this.setState.isHovered = true && this.state.currentSong ) {
-			}
+			( this.setState.isHovered: true, this.state.isPlaying );
+				return onMouseEnter= this.mouseEnter;
 		}
 
-		MouseLeaving() {
-			if ( this.setState.isHovered = false && this.state.currentSong ) {
-			}
+		onMouseLeaving() {
+			( this.state.isHovered, this.setState.play: false );
+				return onMouseLeaving= this.mouseLeave;
 		}
 
 	render() {
@@ -136,47 +99,70 @@ class Album extends Component {
 			                  	className="song" 
 			                  	key={index}
 
-			                  	onClick = {() => this.handleSongClick(song)}
+			                  	onClick = {() => this.handleSongClick( song ) }
 
-								onClick = {() => this.MouseEnter(index)}
+								onHover = {() => this.onMouseEnter( index ) }
 								
-								onClick = {() => this.MouseLeaving()}
+								onHover = {() => this.onMouseLeaving()}
 							>
 
-					        	< td >
+					        	< td 
 					              	className = "song-actions"
-					              	
-					              	{ this.state.isPlaying ? ( < span > {''}
-					              			{this.state.currentSong.title === song.title ? (
-							                < span className = "ion-pause" />
-							              ) : (
-							                < span >
-							                	{index + 1}</span>
-							              		)}
-							            	< /span >
-							          		) : this.state.isHovered === index + 1 ? (
-							            < span className="ion-play" />
-							          ) : (
-							            < span className="song-number">{index + 1}< /span >
-							          )}
-							        < /td >
-					                
-					                < td 
-					                	className = "song-title">{ song.title }
+					              		< span className = "ion-play" > className = "song-number" >this.onMouseEnter < /span >
+					              		< span className = "ion-pause" > className = "song-number" >this.onMouseLeaving < /span >
+					            > 	< /td >
+
+					                < td >
+					                	className = "song-title" >{ song.title }
 					                < /td >
 					                
-					                <td 
+					                < td >
 					                	className = "song-duration">{ song.duration }
-					                </td>
+					                < /td >
 					              
-				              </tr>
+				              < /tr >
 				            )}
 
-	          			</tbody>
-			 	</table>		
-			</section>
+	          			< /tbody >
+			 	< /table >		
+			< /section >
 		)
 	}
 };
 
 	export default Album;
+
+
+
+	//* Your event listeners should be placed alongside side this.handleSongClick():
+
+Move them from here:
+`<td className = "song-number"> <span className = "ion-play" this.onMouseEnter ><span className = "ion-pause" this.onMouseLeave>{index + 1}</span></span></td>`
+
+To here:
+ `<tr className = "song" key = {index} onClick = {() => this.handleSongClick(song)} >`
+
+You should not attempt to return a <span> alongside the event listeners.
+
+
+This is the approach you should take:
+
+1. add event listeners ONLY to the <tr> tag. 
+
+2. Pass parameter index into onMouseEnter()
+
+3. In onMouseEnter(index) assign index to `isMouseInside`
+
+4. Do not call `handleSongClick` inside onMouseEnter() and onMouseLeave()
+We can go through the logic to display icons in a <span> after. They will be part of a <td> tag 
+
+
+I would look up how to formulate event listeners. This is the proper way:
+onClick = {() => this.handleSongClick( song )}    
+onMouseEnter={() => this.onMouseEnter( index )}
+
+You should not have a `setState()` method in the block above `this.setState({ isHovered = true; })`  
+You can set the `isHovered` state inside the event handlers `onMouseEnter( index)`  and `onMouseLeave()` (the functions)
+Also, do you see the way you are setting up the `onClick` event listener? `onClick = {() => this.handleSongClick(song)}`
+This is the same way you should set up the event listeners for `mouseEnter` and `mouseLeave`
+All other code in that block is unnecessary*//
