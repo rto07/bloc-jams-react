@@ -125,7 +125,7 @@ class Album extends Component {
                             <tr className="song" key={index}
 
                                 onClick={() => this.handleSongClick(song)}
-                                
+
                                 onMouseEnter={() => this.onMouseEnter(index)}
                                 onMouseLeave={() => this.onMouseLeave(index)} >
                                 <td>{this.isHovered(song, index)}</td>
@@ -157,6 +157,5 @@ class Album extends Component {
         );
     };
 }
-
 
 export default Album;
