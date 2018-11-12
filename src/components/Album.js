@@ -69,15 +69,32 @@ class Album extends Component {
         }
     }
 
-	handlePrevClick() {
-		const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong -1);
-		const newIndex = Math.max(0, currentIndex - 1);
-		const newSong = this.state.album.songs[newIndex];
-		this.play();
-	}
+    handlePrevClick() {
+        const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
 
+        const newIndex = Math.max(0, currentIndex - 1);
+
+        const newSong = this.state.album.songs[newIndex];
+
+        this.setSong(newSong);
+
+        this.play();
+    }
+
+    handleNextClick() {
+        const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+
+        const newIndex = Math.max(0, currentIndex + 1);
+
+        const newSong = this.state.album.songs[newIndex];
+
+        this.setSong(newSong);
+
+        this.play();
+    }
 
     render() {
+
         return (
 
             <section className="album">
@@ -106,7 +123,9 @@ class Album extends Component {
                         {this.state.album.songs.map((song, index) =>
                             
                             <tr className="song" key={index}
+
                                 onClick={() => this.handleSongClick(song)}
+                                
                                 onMouseEnter={() => this.onMouseEnter(index)}
                                 onMouseLeave={() => this.onMouseLeave(index)} >
                                 <td>{this.isHovered(song, index)}</td>
@@ -129,6 +148,8 @@ class Album extends Component {
                 	handleSongClick = {() => this.handleSongClick(this.state.currentSong)}
 
                 	handlePrevClick = {() => this.handlePrevClick()}
+
+               	handleNextClick = {() => this.handleNextClick()}
                 />
 
 
