@@ -22,6 +22,7 @@ class PlayerBar extends Component {
 				</section>
 
 				<section id="time-control">
+
 		          <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
 		           <input 
 		             type="range" 
@@ -34,6 +35,7 @@ class PlayerBar extends Component {
 		           />
 
 		           <div className="total-time">{this.props.formatTime(this.props.duration)}</div> 
+
 				</section>
 
 				<section id = "volume-control">
@@ -54,6 +56,7 @@ class PlayerBar extends Component {
 		);
 
 	}
+ 
 }
 
 export default PlayerBar;
