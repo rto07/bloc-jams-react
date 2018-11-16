@@ -24,7 +24,7 @@ class PlayerBar extends Component {
 				<section id="time-control">
 					<div className="current-time">-:--</div>
 					<input type="range" className="seek-bar" value="0"/>
-					<div className = "total-time">-:--></div>
+					<div className = "total-time">-:--</div>
 				</section>
 
 				<section id = "volume-control">
@@ -36,5 +36,6 @@ class PlayerBar extends Component {
 			</section>
 		);
 	}
+};
 
 export default PlayerBar;
