@@ -1,0 +1,40 @@
+.point-title{
+  color: #FF51BA;
+  font-family: Avenir, sans-serif;
+  font-weight: Bold;
+  margin: 75px 0px 0px 90px;
+  text-align: left;
+}
+
+.hero-title{
+  color: #FF51BA;
+  font-family: Avenir, sans-serif;
+  font-weight: Bold;
+  margin: 75px 0px 0px 90px;
+  text-align: left;
+}
+
+.point-description{
+  color: #3F93F5;
+  font-family: Avenir, sans-serif;
+  line-height:25px;
+  margin: 10px 100px 0px 90px;
+  text-align: left;
+}
+
+.columns{
+  column-count:3;
+  column-span: all;
+  column-gap: 0px;
+  padding: 75px;
+  column-width: 250px;
+}
+
+footer{
+  background-color: #000000;
+  height: 100px;
+  position:absolute;
+  width:100%;
+  bottom:0px;
+  left:0px;
+}

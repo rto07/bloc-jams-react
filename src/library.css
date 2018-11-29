@@ -1,0 +1,37 @@
+h1{
+  color: #3F93F5;
+  font-family: Avenir, sans-serif; 
+  font-size: 100px;
+  font-weight: Bold;
+  text-align: center;
+  margin:50px 0px 0px 0px;
+}
+
+h2{
+  color: #FF51BA;
+  font-family: Avenir, sans-serif;
+  font-weight: Bold;
+    margin: 0px 0px 0px 0px;
+}
+
+p{
+  color: #3F93F5;
+  font-family: Avenir, sans-serif;
+  line-height:25px;
+    margin: 10px 100px 100px 25px;
+}
+
+.links a{
+  color: white;
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding:103px;
+}
+
+nav{
+  background-color: black;
+  text-align: center;
+  margin-bottom:80px;
+  padding: 5px
+}
