@@ -35,3 +35,11 @@ nav{
   margin-bottom:80px;
   padding: 5px
 }
+
+.columns{
+  column-count:2;
+  column-span: all;
+  column-gap: 0px;
+  padding: 50px;
+  column-width: 250px;
+}

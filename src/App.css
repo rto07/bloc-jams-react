@@ -1,3 +1,5 @@
+/*
+
 .App {
   text-align: center;
 }
@@ -22,6 +24,8 @@
   color: #61dafb;
 }
 
+*/
+
 
 h1{
   color: #3F93F5;
@@ -33,9 +37,8 @@ h1{
 }
 
 .nav{
-  background-color: black;
+  background-color: #3F93F5;
   text-align: left;
-  margin-top:0px 0px 750px 0px;
   padding: 5px;
 }
 
@@ -44,15 +47,24 @@ h1{
   font-family: Avenir, sans-serif;
   font-weight: bold;
   text-decoration: none;
-  padding:0px 260px 0px 90px;
-  align:left;
+  padding:0px 0px 0px 250px;
 }
 
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}*/
+
+footer{
+  background-color: #fff5dd;
+  height: 100px;
+ position: relative;
+ width: 100%;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
