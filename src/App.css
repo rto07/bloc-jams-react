@@ -58,13 +58,3 @@ h1{
     transform: rotate(360deg);
   }
 }*/
-
-footer{
-  background-color: #fff5dd;
-  height: 100px;
- position: relative;
- width: 100%;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}

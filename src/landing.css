@@ -29,3 +29,17 @@
   padding: 75px;
   column-width: 250px;
 }
+
+
+.landing{
+  position: relative;
+}
+
+.footer{
+  background-color: #fff5dd;
+  height: 100px;
+  position:absolute;
+  width:100%;
+  bottom:0px;
+  left:0px;
+}

@@ -13,7 +13,9 @@ const Landing = () => (
 
 			<section className = "selling points">
 				<div class = "point">
-					<h2 className = "point-title">CHOOSE YOUR MUSIC</h2>
+					<h2 className = "point-title">
+						CHOOSE YOUR MUSIC
+					</h2>
 					<p className = "point-description">
 						The world is full of music; why should you have to
 						listen to music that someone else chose?
@@ -31,8 +33,10 @@ const Landing = () => (
 				</div>
 			</section>
 		</div>
-		<footer>
-		</footer>
+		<div className="footer">
+			<footer>
+			</footer>
+		</div>
 	</section>
 	);
 

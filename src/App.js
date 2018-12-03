@@ -18,8 +18,8 @@ class App extends Component {
             <div className = "nav">
               <nav>
                 <div className = "links a">
-                  <Link to = "/"> Landing </Link>
-                  <Link to = "/library"> Library </Link>
+                  <Link to = "/"> LANDING </Link>
+                  <Link to = "/library"> LIBRARY </Link>
                 </div>
               </nav>
             </div>

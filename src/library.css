@@ -36,10 +36,23 @@ nav{
   padding: 5px
 }
 
+.library{
+  position: relative;
+}
+
 .columns{
   column-count:2;
   column-span: all;
   column-gap: 0px;
-  padding: 50px;
+  padding: 75px;
   column-width: 250px;
+}
+
+.footer{
+  background-color: #fff5dd;
+  height: 100px;
+  position:absolute;
+  width:100%;
+  bottom:0px;
+  left:0px;
 }
