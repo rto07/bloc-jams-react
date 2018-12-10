@@ -4,6 +4,7 @@ import './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
+import websiteHeader from '/Users/tar845/bloc/bloc-jams-react/src/assets/images/websiteHeader/websiteHeader_6.jpg';
 
 class App extends Component {
   
@@ -12,16 +13,17 @@ class App extends Component {
     return (
       
       <div className = "App">
-      
         <header>
-          <nav>
-            <Link to = "/"> Landing </Link>
-            <Link to = "/library"> Library </Link>
-          </nav>
-
-          <h1>Bloc Jams</h1>
-
-        </header>
+            <img className="websiteHeader" src={websiteHeader} alt="websiteHeader"/>
+            <div className = "nav">
+              <nav>
+                <div className = "links a">
+                  <Link to = "/"> LANDING </Link>
+                  <Link to = "/library"> LIBRARY </Link>
+                </div>
+              </nav>
+            </div>
+          </header>
 
         <main>
           <Route exact path="/" component={Landing} />

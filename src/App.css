@@ -1,13 +1,66 @@
+
 .App {
-  text-align: center;
+  text-align: left;
 }
+
+.websiteHeader{
+  position: relative;
+top:22px; 
+}
+
+/*.column{
+  column-count: 2;
+  column-span: all;
+  padding: 25px 250px 0px 350px;
+}*/
+
+.albumCover{
+  height: 25%;
+  width: 25%;
+  float: left;
+  padding: 50px 200px 200px 50px;
+  position: relative;
+}
+.albumTitle {
+  position: absolute;
+  float:left;
+  font-style: italic;
+  top:240px;
+  padding: 0px 50px 50px 30px;
+  background-color:rgba(0, 0, 0, .7);
+}
+
+.albumInfo{
+  float:left;
+  padding: 50px 0px 50px 50px;
+  position:absolute;
+  top:5px;
+  left:0px;
+}
+
+a {
+  text-decoration: none;
+  color: #FF51BA;
+  text-align: left;
+}
+
+/*.column1{
+  column-count: 2;
+  column-width: 100%;
+}
+
+.column2{
+  column-count: 1;
+  column-width: 50%;
+  column-rule-color: black;
+}*/
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
 
-.App-header {
+/*.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -16,13 +69,89 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+}*/
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+h1{
+  color: #3F93F5;
+  font-family: Avenir, sans-serif; 
+  font-size: 50px;
+  font-weight: Bold;
+  text-align: left;
+  position: flex;
+}
+
+.nav{
+  position:fixed;
+  background-color: #3F93F5;
+  padding: 5px;
+  min-width:100%;
+  min-height:4%;
+  top:0px;
+}
+
+.links a{
+  position:relative;
+  color: white;
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  left:275px;
+  top:5px;
+  word-spacing:100px; 
+
+}
+
+.footer{
+  background-color: #3F93F5;
+  height: 100px;
+  position:fixed;
+  width:100%;
+  bottom:0px;
+  left:0px;
+}
+
+/*#previous{
+  color:#FF51BA;
+  border: none;
+  width: 50px;
+}
+
+#play-pause{
+  color:#3F93F5;
+  margin: 100px;
+  border-width: 1px;
+  border-left-color: #FF51BA;
+  border-right-color: #FF51BA;
+  border-top-color: #3F93F5;
+  border-bottom-color: #3F93F5;
+}
+
+#next{
+ color: #FF51BA;
+ border: none;
+ width: 50px;
+}
+
+#buttons{
+  float:right;
+}*/
+
+.album{
+  position: relative;
+  float:left;
+  padding: 100px 100px 200px 100px;
+}
+
+/*#song-list{
+  position: absolute;
+  left:300px;
+}*/
+
+*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }

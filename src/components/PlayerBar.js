@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '/Users/tar845/bloc/bloc-jams-react/src/App.css';
 
 class PlayerBar extends Component {
 	render() {
@@ -6,7 +7,6 @@ class PlayerBar extends Component {
 			
 			<section className="player-bar">
 				<section id="buttons">
-					
 					<button id="previous" onClick={this.props.handlePrevClick}>
 						<span className="ion-md-skip-backward"></span>
 					</button>
