@@ -8,34 +8,70 @@
 top:22px; 
 }
 
-/*.column{
-  column-count: 2;
-  column-span: all;
-  padding: 25px 250px 0px 350px;
-}*/
 
 .albumCover{
+  position: relative;
   height: 25%;
   width: 25%;
   float: left;
   padding: 50px 200px 200px 50px;
-  position: relative;
 }
+
 .albumTitle {
   position: absolute;
   float:left;
   font-style: italic;
   top:240px;
-  padding: 0px 50px 50px 30px;
+  padding: 0px 100px 50px 30px;
+  background-color:rgba(0, 0, 0, .7);
+}
+
+#album-title{
+  position: absolute;
+  float:left;
+  font-family: Arial,sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: -1px;
+  top:215px;
+  color: #FF51BA;
+  padding: 20px 100px 70px 30px;
   background-color:rgba(0, 0, 0, .7);
 }
 
 .albumInfo{
+  position:absolute;
   float:left;
   padding: 50px 0px 50px 50px;
-  position:absolute;
   top:5px;
   left:0px;
+}
+
+.artist{  
+  position:absolute;
+  float:left;
+  font-family:Arial, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  top:275px;
+  padding: 21px 0px 50px 50px; 
+  color: #FF51BA;
+}
+
+#release-info{
+  position:absolute;
+  float:left;
+  font-size: 16px;
+  font-style: italic;
+  top:315px;
+  padding-left: 50px; 
+  color: #FF51BA;
+}
+
+#song-number-column{
+  position: ;
+  font-family: Arial, sans-serif;
+  top: 15px;
 }
 
 a {
@@ -44,32 +80,11 @@ a {
   text-align: left;
 }
 
-/*.column1{
-  column-count: 2;
-  column-width: 100%;
-}
-
-.column2{
-  column-count: 1;
-  column-width: 50%;
-  column-rule-color: black;
-}*/
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
-
-/*.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}*/
 
 .App-link {
   color: #61dafb;
@@ -105,15 +120,6 @@ h1{
 
 }
 
-.footer{
-  background-color: #3F93F5;
-  height: 100px;
-  position:fixed;
-  width:100%;
-  bottom:0px;
-  left:0px;
-}
-
 /*#previous{
   color:#FF51BA;
   border: none;
@@ -143,19 +149,33 @@ h1{
 .album{
   position: relative;
   float:left;
-  padding: 100px 100px 200px 100px;
+  padding: 50px 200px 200px 50px;
 }
 
-/*#song-list{
+#song-list{
+  font-family: Arial,sans-serif;
   position: absolute;
-  left:300px;
-}*/
+  left:301px;
+  top: 240px;
+  color: #FF51BA;
+  padding: 25px 25px 25px 25px;
+  background-color: rgba(0, 0, 0, .7); 
+}
 
-*@keyframes App-logo-spin {
+.footer{
+  background-color: #3F93F5;
+  height: 50px;
+  position:fixed;
+  width:100%;
+  bottom:0px;
+  left:0px;
+}
+
+*@keyframes song-list-fade-in {
   from {
-    transform: rotate(0deg);
+    transform: opacity(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: opacity(1);
   }
 }

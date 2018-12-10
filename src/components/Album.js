@@ -158,7 +158,7 @@ class Album extends Component {
 
                     <div className="album-details">
                         <h1 id="album-title">{this.state.album.title}</h1>
-                        <h2 className="artist">{this.state.album.artist}</h2>
+                        <div className="artist">{this.state.album.artist}</div>
                         <div id="release-info">{this.state.album.releaseInfo}</div>
                     </div>
 
@@ -218,6 +218,10 @@ class Album extends Component {
                		formatTime={(e) => this.formatTime(e)}
                 />
 
+			<div className="footer">
+				<footer>
+				</footer>
+			 </div>
 
             </section>
         );
