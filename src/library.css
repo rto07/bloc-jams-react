@@ -1,58 +1,8 @@
-h1{
-  color: #3F93F5;
-  font-family: Avenir, sans-serif; 
-  font-size: 100px;
-  font-weight: Bold;
-  text-align: center;
-  margin:50px 0px 0px 0px;
+.albumInfo {
+  margin-top: 100px;
 }
 
-h2{
-  color: #FF51BA;
-  font-family: Avenir, sans-serif;
-  font-weight: Bold;
-    margin: 0px 0px 0px 0px;
-}
-
-p{
-  color: #3F93F5;
-  font-family: Avenir, sans-serif;
-  line-height:25px;
-    margin: 10px 100px 100px 25px;
-}
-
-.links a{
-  color: white;
-  font-family: Avenir, sans-serif;
-  font-weight: bold;
+.albumTitle{
+  margin-top: 100px;
   text-decoration: none;
-  padding:103px;
-}
-
-nav{
-  background-color: black;
-  text-align: center;
-  margin-bottom:80px;
-  padding: 5px
-}
-
-.library{
-  position: relative;
-}
-
-.columns{
-  column-count:2;
-  column-span: all;
-  column-gap: 0px;
-  padding: 75px;
-  column-width: 250px;
-}
-
-.footer{
-  background-color: #fff5dd;
-  height: 100px;
-  position:absolute;
-  width:100%;
-  bottom:0px;
-  left:0px;
 }

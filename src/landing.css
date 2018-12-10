@@ -2,7 +2,7 @@
   color: #3F93F5;
   font-family: Avenir, sans-serif;
   font-weight: Bold;
-  margin: 75px 0px 0px 90px;
+  margin: 0px 0px 0px 0px;
   text-align: left;
 }
 
@@ -18,7 +18,7 @@
   color: #3F93F5;
   font-family: Avenir, sans-serif;
   line-height:25px;
-  margin: 10px 100px 0px 90px;
+  margin: 10px 100px 0px 0px;
   text-align: left;
 }
 
@@ -30,16 +30,6 @@
   column-width: 250px;
 }
 
-
 .landing{
   position: relative;
-}
-
-.footer{
-  background-color: #fff5dd;
-  height: 100px;
-  position:absolute;
-  width:100%;
-  bottom:0px;
-  left:0px;
 }
