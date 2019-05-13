@@ -4,11 +4,8 @@ import Style from './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
-<<<<<<< Updated upstream
-=======
 import websiteHeader from './websiteHeader/websiteHeader_6.jpg';
 
->>>>>>> Stashed changes
 
 class App extends Component {
   
@@ -19,27 +16,17 @@ class App extends Component {
       <div className = "App">
       
         <header>
-<<<<<<< Updated upstream
-          <nav>
-            <Link to = "/"> Landing </Link>
-            <Link to = "/library"> Library </Link>
-          </nav>
 
-          <h1>Bloc Jams</h1>
-
-        </header>
-=======
             <img className="websiteHeader" src={websiteHeader} alt="websiteHeader"/>
             <div className = "nav">
               <nav>
-                <div className = "links a">
+                <div className = "nav-links">
                   <Link to = "/"> HOME </Link>
                   <Link to = "/library"> LIBRARY </Link>
                 </div>
               </nav>
             </div>
           </header>
->>>>>>> Stashed changes
 
         <main>
           <Route exact path="/" component={Landing} />
