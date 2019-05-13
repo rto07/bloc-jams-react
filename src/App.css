@@ -1,4 +1,5 @@
 .App {
+<<<<<<< Updated upstream
   text-align: center;
 }
 
@@ -15,9 +16,124 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+=======
+  text-align: left;
+}
+
+.websiteHeader{
+  position: relative;
+top:22px; 
+}
+
+.point-title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color:rgb(0, 140, 255);
+padding-top:  25px;
+ position: relative;
+}
+
+.point-description{
+font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.albumCover{
+  position: relative;
+  height: 25%;
+  width: 25%;
+  float: left;
+  padding: 50px 200px 200px 50px;
+}
+
+.albumTitle {
+  position: absolute;
+  float:left;
+  font-style: italic;
+  top:240px;
+  padding: 0px 100px 50px 30px;
+  background-color:rgba(0, 0, 0, .7);
+}
+
+#album-title{
+  position: absolute;
+  float:left;
+  font-family: Arial,sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: -1px;
+  top:215px;
+  color: #FF51BA;
+  padding: 20px 100px 70px 30px;
+  background-color:rgba(0, 0, 0, .7);
+}
+
+.albumInfo{
+  position:absolute;
+  float:left;
+  padding: 50px 0px 50px 50px;
+  top:5px;
+  left:0px;
+}
+
+.artist{  
+  position:absolute;
+  float:left;
+  font-family:Arial, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  top:275px;
+  padding: 21px 0px 50px 50px; 
+  color: #FF51BA;
+}
+
+#release-info{
+  position:absolute;
+  float:left;
+  font-size: 16px;
+  font-style: italic;
+  top:315px;
+  padding-left: 50px; 
+  color: #FF51BA;
+}
+
+#song-number-column{
+  position: relative;
+  font-family: Arial, sans-serif;
+  top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #FF51BA;
+  text-align: left;
+}
+
+h1{
+  color: #3F93F5;
+  font-family: Avenir, sans-serif; 
+  font-size: 50px;
+  font-weight: Bold;
+  text-align: left;
+  position: flex;
+}
+
+.nav{
+  position:fixed;
+  background-color: #3F93F5;
+  padding: 5px;
+  min-width:100%;
+  min-height:4%;
+  top:0px;
+}
+
+.links a{
+  position:relative;
+>>>>>>> Stashed changes
   color: white;
 }
 
+<<<<<<< Updated upstream
 .App-link {
   color: #61dafb;
 }
@@ -30,3 +146,23 @@
     transform: rotate(360deg);
   }
 }
+=======
+#song-list{
+  font-family: Arial,sans-serif;
+  position: absolute;
+  left:301px;
+  top: 240px;
+  color: #FF51BA;
+  padding: 25px 25px 25px 25px;
+  background-color: rgba(0, 0, 0, .7); 
+}
+
+.footer{
+  background-color: #3F93F5;
+  height: 25px;
+  position:fixed;
+  width:100%;
+  bottom:0px;
+  left:0px;
+}
+>>>>>>> Stashed changes

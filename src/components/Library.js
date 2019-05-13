@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../Data/albums';
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 
 class Library extends Component {
 	constructor(props){
