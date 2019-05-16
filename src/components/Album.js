@@ -141,10 +141,7 @@ class Album extends Component {
    		var seconds = Math.floor(time % 60);
 		if (time === isNaN) return ("-:--")
         else return (seconds < 10 ? (`${minutes}:0${seconds}`) : (`${minutes}:${seconds}`));
-		
-
 	}
-
 
     render() {
 
@@ -158,7 +155,7 @@ class Album extends Component {
 
                     <div className="album-details">
                         <h1 id="album-title">{this.state.album.title}</h1>
-                        <h2 className="artist">{this.state.album.artist}</h2>
+                        <h2 id="artist">{this.state.album.artist}</h2>
                         <div id="release-info">{this.state.album.releaseInfo}</div>
                     </div>
 
@@ -169,7 +166,6 @@ class Album extends Component {
                     <colgroup>
                         <col id="song-number-column" />
                         <col id="song-title-column" />
-                        <col id="song-duration-column" />
                     </colgroup>
                    
                     <tbody>
@@ -183,7 +179,6 @@ class Album extends Component {
                                 onMouseLeave={() => this.onMouseLeave(index)} >
                                 <td>{this.isHovered(song, index)}</td>
                                 <td>{song.title}</td>
-                                <td>{song.duration}</td>
                             </tr>
                         )
                         }

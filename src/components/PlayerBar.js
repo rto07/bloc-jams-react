@@ -41,9 +41,6 @@ class PlayerBar extends Component {
 					<input 
 						type="range" 
 						className="volume-bar" 
-						max = "1"
-						min = "0"
-						step = "0.01"
 						onChange= {this.props.handleVolumeChange}
 					/>
 

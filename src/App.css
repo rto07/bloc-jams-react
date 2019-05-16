@@ -2,24 +2,46 @@
   text-align: left;
 }
 
+.hero-title{
+  color: #3F93F5;
+  font-family: Avenir, sans-serif; 
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: left;
+  position: flex;
+  padding-left: 65px;
+}
+
 .websiteHeader{
-  position: relative;
-top:22px; 
+position: relative; 
+height: 325px;
+width: 1450px;
+padding-top: 3px;
+}
+
+.selling-points{
+  column-count: 3;
+  column-gap: 200px;
+  column-rule-color: #FF51BA;
+  column-rule-style: solid;
+  column-rule-width: 1.5px;
+ padding-left: 75px;
+}
+
+.point{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #3F93F5;
 }
 
 .point-title{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   color:rgb(0, 140, 255);
-padding-top:  25px;
  position: relative;
 }
 
-.point-description{
-font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-}
-
+/* Library.js styles */
 .albumCover{
   position: relative;
   height: 25%;
@@ -31,22 +53,12 @@ font-family: Arial, Helvetica, sans-serif;
 .albumTitle {
   position: absolute;
   float:left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
   font-style: italic;
   top:240px;
   padding: 0px 100px 50px 30px;
-  background-color:rgba(0, 0, 0, .7);
-}
-
-#album-title{
-  position: absolute;
-  float:left;
-  font-family: Arial,sans-serif;
-  font-size: 25px;
-  font-style: italic;
-  letter-spacing: -1px;
-  top:215px;
   color: #FF51BA;
-  padding: 20px 100px 70px 30px;
   background-color:rgba(0, 0, 0, .7);
 }
 
@@ -58,79 +70,103 @@ font-family: Arial, Helvetica, sans-serif;
   left:0px;
 }
 
-.artist{  
+/* Album.js styles */
+
+#album-cover-art{
+  position: relative;
+  float: left;
+  padding: 50px 200px 200px 50px;
+}
+
+#album-title{
+  position: absolute;
+  float:left;
+  font-family: Arial,sans-serif;
+  font-size: 25.5px;
+  font-style: italic;
+  color: #FF51BA;
+  padding: 21px 100px 70px 30px;
+  margin: 240px 20px 20px 50px;
+  background-color:rgba(0, 0, 0, .7);
+}
+
+#artist{  
   position:absolute;
   float:left;
   font-family:Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
-  top:275px;
-  padding: 21px 0px 50px 50px; 
+  font-weight: 100;
+  padding: 281px 0px 50px 100px; 
   color: #FF51BA;
 }
 
 #release-info{
   position:absolute;
   float:left;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
-  top:315px;
-  padding-left: 50px; 
+  top:600px;
+  padding: 85px 0px 0px 100px; 
   color: #FF51BA;
-}
-
-#song-number-column{
-  position: relative;
-  font-family: Arial, sans-serif;
-  top: 15px;
-}
-
-a {
-  text-decoration: none;
-  color: #FF51BA;
-  text-align: left;
-}
-
-h1{
-  color: #3F93F5;
-  font-family: Avenir, sans-serif; 
-  font-size: 50px;
-  font-weight: Bold;
-  text-align: left;
-  position: flex;
-}
-
-.nav{
-  position:fixed;
-  background-color: #3F93F5;
-  padding: 5px;
-  min-width:100%;
-  min-height:4%;
-  top:0px;
-}
-
-.nav-links{
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  position:relative;
-  padding: 10px;
 }
 
 #song-list{
   font-family: Arial,sans-serif;
   position: absolute;
-  left:301px;
-  top: 240px;
   color: #FF51BA;
   padding: 25px 25px 25px 25px;
+  margin: 240px 50px 25px 478px;
   background-color: rgba(0, 0, 0, .7); 
+}
+
+.player-bar{
+  position: absolute;
+  color: #3F93F5;
+  margin: 550px 0px 0px 100px;
+}
+
+#time-control{
+position: relative;
+margin: 5px 0px 25px 0px;
+}
+
+.total-time{
+  margin: 0px 0px 5px 0px;
+}
+
+.previous{
+  color: #FF51BA;
+}
+
+.seek-bar{
+  position: inline;
+  width: 70px;
+  margin: 0px 0px 25px 45px;
+}
+
+.nav-links{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: .5px;
+  text-align: left;
+  color: white;
+  position: relative;
+  background-color: #3F93F5;
+  padding-top: 12px;
+  padding-left:85px;
+  padding-bottom:10px;
+  
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding-left:85px;
 }
 
 .footer{
   background-color: #3F93F5;
-  height: 25px;
-  position:fixed;
-  width:100%;
-  bottom:0px;
-  left:0px;
+position: relative;
 }
