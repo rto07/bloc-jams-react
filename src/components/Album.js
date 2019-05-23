@@ -60,9 +60,15 @@ class Album extends Component {
     	this.audioElement.removeEventListener('volumechange', this.eventListeners.volumechange);
     }
 
-    setSong(song) {
-        this.audioElement.src = song.audioSrc;
-        this.setState({ currentSong: song });
+ setSong(song) {
+      const songs = this.state.album.songs
+      console.log(song, this.state.album.songs);
+      const lastTrack = songs[songs.length - 1];
+      if (song.title === lastTrack.title) {
+        song = songs[0];
+      }
+      this.audioElement.src = song.audioSrc;
+      this.setState({ currentSong: song });
     }
 
     handleSongClick(song) {
@@ -179,6 +185,7 @@ class Album extends Component {
                                 onMouseLeave={() => this.onMouseLeave(index)} >
                                 <td>{this.isHovered(song, index)}</td>
                                 <td>{song.title}</td>
+                                <td>{song.duration}</td>
                             </tr>
                         )
                         }
