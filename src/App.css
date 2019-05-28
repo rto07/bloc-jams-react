@@ -115,36 +115,93 @@ padding-top: 3px;
   font-family: Arial,sans-serif;
   position: absolute;
   color: #FF51BA;
-  padding: 25px 25px 25px 25px;
+  padding: 25px 25px 25px 14px;
   margin: 240px 50px 25px 478px;
   background-color: rgba(0, 0, 0, .7); 
 }
 
+#songIndex{
+  position: absolute;
+}
+
+#songTitle{
+  position: relative;
+  padding: 0px 0px 0px 20px;
+}
+
 .player-bar{
   position: absolute;
-  color: #3F93F5;
-  margin: 550px 0px 0px 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.5) ;
+  color: rgb(255, 255, 255);
+  margin: 468px 0px 0px 50px;
+  padding: 50px 0px 0px 50px;
+  width: 560px;
 }
+
+#buttons{
+  position: absolute;
+  margin:0px 0px 0px 0px;
+}
+
+/* .previous{
+
+}
+
+.play-pause{
+
+}
+
+.next{
+  
+} */
 
 #time-control{
-position: relative;
-margin: 5px 0px 25px 0px;
+position: absolute;
+margin: 0px 0px 0px 90px;
 }
 
-.total-time{
-  margin: 0px 0px 5px 0px;
-}
-
-.previous{
-  color: #FF51BA;
+.current-time{
+  position: absolute;
+  margin: 0px 0px 0px 0px; 
 }
 
 .seek-bar{
-  position: inline;
-  width: 70px;
-  margin: 0px 0px 25px 45px;
+  position: absolute;
+  width: 320px;
+  margin: 0px 0px 0px 40px;
 }
 
+.total-time{
+  position: absolute;
+  margin: 0px 0px 0px 370px;
+}
+
+ #volume-control{
+  position: relative;
+  padding: 0px 0px 93px 100px;
+}
+
+ .volume-bar{
+   position: absolute;
+  width: 70px;
+  margin:25px 0px 0px 35px; 
+ }
+
+.ion-md-volume-low{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 25px 0px 0px 0px;
+} 
+
+.ion-md-volume-high{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 25px 0px 0px 115px;
+}
 .nav-links{
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;

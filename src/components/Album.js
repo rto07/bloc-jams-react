@@ -19,7 +19,7 @@ class Album extends Component {
             duration: album.songs[0].duration,
             isPlaying: false,
             isHovered: false,
-            currentVolume: 1.0,
+            currentVolume: 1.0
         };
 
         this.audioElement = document.createElement('audio');
@@ -61,12 +61,8 @@ class Album extends Component {
     }
 
  setSong(song) {
-      const songs = this.state.album.songs
+    //   const songs = this.state.album.songs
       console.log(song, this.state.album.songs);
-      const lastTrack = songs[songs.length - 1];
-      if (song.title === lastTrack.title) {
-        song = songs[0];
-      }
       this.audioElement.src = song.audioSrc;
       this.setState({ currentSong: song });
     }
@@ -105,7 +101,7 @@ class Album extends Component {
     handlePrevClick() {
         const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
 
-        const newIndex = Math.max(0, currentIndex - 1);
+        let newIndex = Math.max(0, currentIndex - 1);
 
         const newSong = this.state.album.songs[newIndex];
 
@@ -115,12 +111,12 @@ class Album extends Component {
     }
 
     handleNextClick() {
-        const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+ const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
 
-        const newIndex = Math.max(0, currentIndex + 1);
+        let newIndex = (currentIndex + 1);
         
-        if (this.state.album.songs[currentIndex] === this.state.album.songs.length) {
-            newIndex = currentIndex;
+        if (this.state.album.songs[currentIndex] === this.state.album.songs[4]) {
+            newIndex = 0;
           }
 
         const newSong = this.state.album.songs[newIndex];
@@ -182,14 +178,12 @@ class Album extends Component {
                         {this.state.album.songs.map((song, index) =>
                             
                             <tr className="song" key={index}
-
                                 onClick={() => this.handleSongClick(song)}
 
                                 onMouseEnter={() => this.onMouseEnter(index)}
                                 onMouseLeave={() => this.onMouseLeave(index)} >
                                 <td>{this.isHovered(song, index)}</td>
                                 <td>{song.title}</td>
-                                <td>{song.duration}</td>
                             </tr>
                         )
                         }
