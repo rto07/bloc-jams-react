@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
+
 class PlayerBar extends Component {
+
 	render() {
 		return (
 			
@@ -11,7 +13,7 @@ class PlayerBar extends Component {
 						<span className="ion-md-skip-backward"></span>
 					</button>
 					
-					<button id="play-pause" onClick={this.props.handleSongClick}>
+					<button id="play-pause" onClick={e => this.props.handleSongClick(this.props.currentSong)}>
 						<span className={this.props.isPlaying ? 'ion-md-pause' : 'ion-md-play'}></span>
 					</button>
 					
@@ -22,7 +24,10 @@ class PlayerBar extends Component {
 				</section>
 
 				<section id="time-control">
-		          <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
+				  <div className="current-time">
+				  {this.props.formatTime(this.props.currentTime)}
+				</div>
+				
 		           <input 
 		             type="range" 
 		             className="seek-bar" 
@@ -37,10 +42,16 @@ class PlayerBar extends Component {
 				</section>
 
 				<section id = "volume-control">
-					<div className="ion-md-volume-low">{this.props.currentVolume}</div>					
+					<div className="ion-md-volume-low">
+					
+					{this.props.currentVolume}</div>					
 					<input 
 						type="range" 
 						className="volume-bar" 
+						value={this.props.currentVolume || 1}
+						min="0"
+						max="100"
+						step="0.01"
 						onChange= {this.props.handleVolumeChange}
 					/>
 

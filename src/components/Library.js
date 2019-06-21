@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../Data/albums';
+import blurredBackground from './../assets/images/blurred_backgrounds/blur_bg_3.jpg';
 
 
 
 class Library extends Component {
 	constructor(props){
 		super(props);
-		this.state = { albums: albumData };
+		this.state = { 
+			albums: albumData 
+		};
 	}
 	
 	render(){
@@ -28,11 +31,6 @@ class Library extends Component {
 						</Link>
 					)
 				}
-			
-				<div className="footer">
-					<footer>
-					</footer>	
-				</div>
 			
 			</section>
 		);

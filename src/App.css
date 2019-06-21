@@ -2,6 +2,36 @@
   text-align: left;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
 .hero-title{
   color: #3F93F5;
   font-family: Avenir, sans-serif; 
@@ -16,7 +46,8 @@
 position: relative; 
 height: 325px;
 width: 1450px;
-padding-top: 3px;
+margin-top: 40px;
+display: flex;
 }
 
 .selling-points{
@@ -82,11 +113,13 @@ padding-top: 3px;
   position: absolute;
   float:left;
   font-family: Arial,sans-serif;
-  font-size: 25.5px;
+  font-size: 50px;
   font-style: italic;
-  color: #FF51BA;
-  padding: 21px 100px 70px 30px;
-  margin: 240px 20px 20px 50px;
+  color: rgb(255, 255, 255);
+  width: 535px;
+  height: 100px;
+  margin: 50px 0px 20px 50px;
+  padding:25px 0px 0px 25px; 
   background-color:rgba(0, 0, 0, .7);
 }
 
@@ -97,7 +130,7 @@ padding-top: 3px;
   font-size: 17px;
   font-style: italic;
   font-weight: 100;
-  padding: 281px 0px 50px 100px; 
+  padding: 92px 0px 50px 410px; 
   color: #FF51BA;
 }
 
@@ -106,8 +139,7 @@ padding-top: 3px;
   float:left;
   font-size: 17px;
   font-style: italic;
-  top:600px;
-  padding: 85px 0px 0px 100px; 
+  padding: 125px 0px 50px 410px; 
   color: #FF51BA;
 }
 
@@ -116,7 +148,7 @@ padding-top: 3px;
   position: absolute;
   color: #FF51BA;
   padding: 25px 25px 25px 14px;
-  margin: 240px 50px 25px 478px;
+  margin: 240px 50px 25px 485px;
   background-color: rgba(0, 0, 0, .7); 
 }
 
@@ -133,11 +165,12 @@ padding-top: 3px;
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.5) ;
+  background-color: rgba(0,0,0,0.5) ;
   color: rgb(255, 255, 255);
   margin: 468px 0px 0px 50px;
   padding: 50px 0px 0px 50px;
-  width: 560px;
+  height: 90px;
+  width: 510px;
 }
 
 #buttons{
@@ -158,35 +191,35 @@ padding-top: 3px;
 } */
 
 #time-control{
-position: absolute;
+position: relative;
 margin: 0px 0px 0px 90px;
 }
 
 .current-time{
-  position: absolute;
-  margin: 0px 0px 0px 0px; 
+  position: relative;
+  margin: 0px 0px 0px 295px; 
 }
 
 .seek-bar{
   position: absolute;
-  width: 320px;
-  margin: 0px 0px 0px 40px;
+  width: 280px;
 }
 
 .total-time{
-  position: absolute;
-  margin: 0px 0px 0px 370px;
+  position: relative;
+  margin: 0px 0px 0px 295px;
+  padding:0px 0px 0px 0px;
 }
 
  #volume-control{
-  position: relative;
-  padding: 0px 0px 93px 100px;
+  position: absolute;
+  padding: 0px 0px 0px 0px;
 }
 
  .volume-bar{
    position: absolute;
   width: 70px;
-  margin:25px 0px 0px 35px; 
+  margin:25px 0px 0px 25px; 
  }
 
 .ion-md-volume-low{

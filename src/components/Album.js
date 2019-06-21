@@ -10,6 +10,7 @@ class Album extends Component {
 
         const album = albumData.find(album => {
             return album.slug === this.props.match.params.slug
+
         });
 
         this.state = {
@@ -21,10 +22,15 @@ class Album extends Component {
             isHovered: false,
             currentVolume: 1.0
         };
-
+       this.handleNextClick.bind(this);
+        this.handlePrevClick.bind(this);
+        this.handleSongClick.bind(this);
+        this.handleTimeChange.bind(this);
+        this.handleVolumeChange.bind(this);
         this.audioElement = document.createElement('audio');
         this.audioElement.src = album.songs[0].audioSrc;
     }
+    
 
     play() {
         this.audioElement.play();
@@ -111,7 +117,16 @@ class Album extends Component {
     }
 
     handleNextClick() {
- const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+
+        // Add logic to  `handleNextClick` that would set the song to `songs[0]` if you're on the last song, _before_ firing `setSong`.
+
+        // - your `const newIndex` has to become a `let` 
+        
+        // It's better to not hard-code index `4`, but instead take the total length of the songs array, minus 1. 
+        
+        // You only need to assign `newIndex` to `0` inside your logic. Not `Math.max()`
+
+        const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
 
         let newIndex = (currentIndex + 1);
         
@@ -140,7 +155,7 @@ class Album extends Component {
 		this.audioElement.currentVolume = newVolume;
 		
 		this.setState({currentVolume: newVolume});
-	}
+	} 
 
 	formatTime(time) {
 		var minutes = Math.floor(time / 60);
@@ -178,12 +193,14 @@ class Album extends Component {
                         {this.state.album.songs.map((song, index) =>
                             
                             <tr className="song" key={index}
+
                                 onClick={() => this.handleSongClick(song)}
 
                                 onMouseEnter={() => this.onMouseEnter(index)}
                                 onMouseLeave={() => this.onMouseLeave(index)} >
                                 <td>{this.isHovered(song, index)}</td>
                                 <td>{song.title}</td>
+                                <td></td>
                             </tr>
                         )
                         }
