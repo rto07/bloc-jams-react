@@ -5,7 +5,7 @@
   "dependencies": {
     "ajv": "^6.5.4",
     "babel-preset-react": "^6.24.1",
-    "bcrypt": "^3.0.1",
+    "bcrypt": "^5.0.0",
     "emotion": "^9.2.12",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
