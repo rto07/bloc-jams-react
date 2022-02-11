@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^6.5.4",
+    "ajv": "^6.12.3",
     "babel-preset-react": "^6.24.1",
     "bcrypt": "^3.0.1",
     "emotion": "^9.2.12",
